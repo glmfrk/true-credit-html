@@ -1,0 +1,177 @@
+.testimonial-section {
+  background: #fdf9ef url("../images/testimonial/background.png") no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  padding-bottom: 200px;
+  @include respond(xl) {
+    padding-bottom: 150px;
+  }
+  @include respond(medium) {
+    padding-bottom: 100px;
+  }
+  @include respond(tabland) {
+    padding-bottom: 60px;
+  }
+  @include respond(tabport) {
+    padding-bottom: 0px;
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+.testimonialWrapper {
+  @include respond(phone) {
+    padding-bottom: 45px;
+  }
+  .slide-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    @include respond(tabport) {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .client-image {
+      flex-basis: 100%;
+      max-width: 40%;
+      position: relative;
+      @include respond(medium) {
+        max-width: 44%;
+      }
+      @include respond(tabland) {
+        max-width: 48%;
+      }
+      @include respond(tabport) {
+        max-width: 100%;
+      }
+      &::before {
+        content: "";
+        z-index: 2;
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 381px;
+        height: 391px;
+        display: block;
+        background: #ffa409;
+        border-radius: 220px 229.5px 0px 0px;
+        @include respond(tabland) {
+          max-width: 353px;
+        }
+      }
+      &::after {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        top: 25%;
+        right: 6px;
+        width: 155px;
+        height: 187px;
+        display: block;
+        background: url("../images/testimonial/bg-shape.png") no-repeat;
+        background-size: cover;
+      }
+      img {
+        position: relative;
+        z-index: 3;
+        width: auto;
+      }
+    }
+    .client-info {
+      background: $clrWhite;
+      box-shadow: 6px 6px 20px rgba(27, 47, 53, 0.14);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      padding: 16px 0px 14px 20px;
+      width: 100%;
+      max-width: 257px;
+      position: absolute;
+      z-index: 4;
+      bottom: -23px;
+      right: 0px;
+      .icon {
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+      h5 {
+        margin: 0;
+        a {
+          font-family: $fontPoppins;
+          font-weight: $fontSemi;
+          font-size: 16px;
+          line-height: 170%;
+          letter-spacing: 0.02em;
+          color: $clrDefault;
+          display: inherit;
+          margin: inherit;
+        }
+      }
+      p {
+        font-family: $fontPoppins;
+        font-weight: $fontMid;
+        font-size: 14px;
+        line-height: 170%;
+        letter-spacing: 0.02em;
+        color: $clrContent;
+      }
+    }
+    .slide-content {
+      flex: 1;
+      margin-top: 100px;
+      @include respond(medium) {
+        margin-top: 50px;
+      }
+      @include respond(tabland) {
+        margin-top: 0px;
+      }
+      .block-content {
+        margin-left: 100px;
+        @include block-contents;
+        @include respond(medium) {
+          margin-left: 60px;
+        }
+        @include respond(tabland) {
+          margin-left: 30px;
+        }
+        p {
+          margin-bottom: 15px;
+        }
+        h5 {
+          a {
+            font-family: $fontUrbanist;
+            font-weight: $fontSemi;
+            font-size: 22px;
+            line-height: 170%;
+            letter-spacing: 0.02em;
+            color: $clrDefault;
+            display: inherit;
+            margin: 0px 0px 9px;
+            @include respond(phone) {
+              font-size: 18px;
+              line-height: 140%;
+              margin: 0px 0px 5px;
+            }
+          }
+        }
+        .designation {
+          @include respond(phone) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  & {
+    @include carousel-nav;
+    top: auto;
+    bottom: 60px;
+  }
+}

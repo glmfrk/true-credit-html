@@ -1,0 +1,502 @@
+@import "mediaQuery";
+
+@mixin section-title {
+  .section-title {
+    margin-bottom: 53.72px;
+    h6 {
+      font-family: $fontUrbanist;
+      font-size: 18px;
+      font-weight: $fontRegular;
+      line-height: 27px;
+      display: inline-block;
+      color: $clrPrimary;
+      position: relative;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 50px;
+      line-height: 112%;
+      text-align: center;
+      color: #ffa408;
+      margin-bottom: 10px;
+      .h2Highlight {
+        font-weight: 800;
+        line-height: 112%;
+        text-align: center;
+        color: $clrDefault;
+        display: inline-block;
+      }
+      @include respond(tabland) {
+        font-size: 42px;
+      }
+      @include respond(tabport) {
+        font-size: 36px;
+      }
+      @include respond(phone) {
+        font-size: 36px;
+      }
+      @include respond(phone-sm) {
+        font-size: 29px;
+      }
+    }
+    p {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 20px;
+      line-height: 138%;
+      text-align: center;
+      color: $clrContent;
+      max-width: 724px;
+      margin: auto;
+      @include respond(tabport) {
+        font-size: 18px;
+      }
+      @include respond(phone) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin block-contents {
+  .block-content {
+    .sub-title {
+      font-family: $fontUrbanist;
+      font-weight: $fontSemi;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: $clrPrimary;
+      @include respond(phone) {
+        font-size: 16px;
+      }
+    }
+    h3 {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 36px;
+      line-height: 134%;
+      color: $clrDefault;
+      margin: 16px 0px;
+      span {
+        font-weight: 800;
+      }
+      @include respond(tabland) {
+        font-size: 32px;
+      }
+      @include respond(tabport) {
+        font-size: 27px;
+      }
+      @include respond(phone) {
+        font-size: 24px;
+        margin: 6px 0px 12px;
+      }
+    }
+    p {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 20px;
+      line-height: 160%;
+      color: $clrContent;
+      margin-bottom: 26px;
+      @include respond(tabport) {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@mixin banner-props {
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+@mixin banner-bg {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+@mixin transform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin page-banner {
+  padding: 80px 0px;
+  position: relative;
+
+  .page-banner-title {
+    h2 {
+      font-family: $fontUrbanist;
+      color: $clrdefault;
+      font-size: 50px;
+      // font-weight: $fontRegular;
+
+      @include respond(tabland) {
+        font-size: 40px;
+      }
+
+      @include respond(phone) {
+        font-size: 35px;
+      }
+    }
+
+    .link {
+      font-family: $fontUrbanist;
+      font-size: 16px;
+      color: $clrheading;
+      font-weight: $fontMid;
+      text-transform: capitalize;
+      background: $clrdefault;
+      padding: 10px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      box-shadow: 0px 2px 22px rgba(93, 93, 93, 0.13);
+      margin-top: 30px;
+
+      @include respond(tabland) {
+        margin-top: 30px;
+      }
+      @include respond(phone) {
+        font-size: 14px;
+        margin-top: 20px;
+        padding: 8px 18px;
+      }
+
+      a {
+        color: $clrPrimary;
+        transition: $transition;
+        &:hover {
+          color: $clrPrimary;
+        }
+      }
+      span {
+        margin: 0px 3px;
+      }
+    }
+  }
+  @include respond(tabland) {
+    padding: 80px 0px;
+  }
+  @include respond(phone) {
+    padding: 50px 0px;
+  }
+  @include respond(phone-xm) {
+    padding: 35px 0px;
+  }
+}
+
+@mixin video-box {
+  .round {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      // border-radius: 3px;
+      // background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .video-box {
+      margin: 0;
+      .video-btn {
+        i {
+          position: relative;
+          z-index: 1;
+          top: 0px;
+          left: 0px;
+          font-size: 20px;
+          color: $clrPrimary;
+        }
+        @include transform;
+        background-color: $clrdefault;
+        border-radius: 50%;
+        color: $clrPrimary;
+        display: block;
+        text-align: center;
+        line-height: 85px;
+        margin: 0 auto;
+        height: 80px;
+        width: 80px;
+        z-index: 1;
+
+        @include respond(phone-sm) {
+          height: 60px;
+          width: 60px;
+          line-height: 67px;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          animation: beat 1.5s linear infinite;
+          height: 100%;
+          width: 100%;
+          border: 8px solid $clrPrimary;
+          border-radius: 50%;
+          z-index: -1;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          animation: beat 2s linear infinite;
+          border: 8px solid rgb(206, 206, 206);
+          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+        }
+      }
+      span {
+        display: none !important;
+      }
+    }
+
+    @keyframes beat {
+      0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        -webkit-transform: scale(2);
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+@mixin carousel-nav {
+  .owl-carousel {
+    .owl-dots {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: auto;
+      bottom: 60px;
+      left: 49.5%;
+      gap: 21px;
+
+      @include respond(tabland) {
+        left: 52%;
+        gap: 15px;
+      }
+      @include respond(tabport) {
+        top: 87%;
+        left: 50%;
+      }
+      @include respond(phone) {
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        gap: 13px;
+      }
+      @include respond(phone-xm) {
+        left: 35%;
+      }
+      button {
+        height: 14px;
+        width: 14px;
+        background: rgba(30, 30, 30, 0.7);
+        border-radius: 50%;
+        display: block;
+        border: none;
+        outline: none;
+        transition: $transition;
+        position: relative;
+        transition: $transition;
+        @include respond(phone) {
+          width: 10px;
+          height: 10px;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          border: 1px solid $clrDefault;
+          opacity: 0.3;
+          transition: $transition;
+        }
+
+        &.active {
+          &::before {
+            height: 30px;
+            width: 30px;
+            border: 1px solid $clrDefault;
+            opacity: 0.3;
+            @include respond(phone) {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+    .owl-nav {
+      position: absolute;
+      bottom: -55px;
+      width: 100%;
+      display: none;
+      font-size: 14px;
+      transition: $transition;
+      text-align: center;
+
+      button {
+        border-radius: 50px;
+        border: none;
+        font-size: 25px;
+        outline: none;
+        transition: $transition;
+        // box-shadow: 0px 19px 24px rgba(185, 185, 185, 0.5);
+        &.owl-prev {
+          margin-right: 20px;
+
+          &:hover {
+            color: $clrPrimary;
+          }
+        }
+        &.owl-next {
+          margin-left: 20px;
+
+          &:hover {
+            color: $clrPrimary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin socialLinks {
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    list-style: none;
+    @include respond(tabport) {
+      gap: 7px;
+    }
+    li {
+      &:nth-child(1) {
+        a {
+          &:hover {
+            path {
+              fill: #4267b2;
+              stroke: none;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        a {
+          &:hover {
+            path {
+              fill: #1da1f2;
+              stroke: none;
+            }
+          }
+        }
+      }
+    }
+    a {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 39.41px;
+      height: 39.18px;
+      border-radius: 50%;
+      color: $clrDefault;
+      background: $clrWhite;
+      box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
+      transition: $transition;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+      &:hover {
+        i,
+        path {
+          transform: rotate3d(180deg);
+          color: $clrPrimary;
+          stroke: #ffa408;
+        }
+      }
+      @include respond(tabland) {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+      }
+      @include respond(phone-sm) {
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+      }
+    }
+    .phone {
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 25px;
+        font-weight: 900;
+        margin-right: 12px;
+      }
+      a {
+        font-family: $fontUrbanist;
+        font-weight: $fontSemi;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.014em;
+        color: #1e1e1e;
+        white-space: nowrap;
+        background: transparent;
+        box-shadow: none;
+        display: inline;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/*-------------------------------------
+    Template Name: AndBank Html Template
+    Description: AndBank Html Template
+    Version: 1.0
+    Tags: 
+---------------------------------------*/
+
+// ---------------------------------------*/
+/*
+    Table of Context
+    -------------------------------
+    01. Common SCSS
+    02. Content Box
+    03. Icon Box
+    04. Order, Unorder List
+    05. Round One side 
+    06. Video side 
+    07. Overlap Image Box
+    08. Image Box
+
+    01. Header style
+    02. Banner style
+    03. Feature style
+    04. About Section
+    05. Work Section
+    06. Traders Section
+    07. Service Section
+    08. Banking Section
+    09. Payment Section
+    10. Testimonial section
+    11. Cta Box section
+    12. Counter section
+    13. Apps Section
+    14. Blog Section
+    15. Footer Section
+    
+
+/**
+ * Fonts 
+ * Roboto
+ * Denver-Serial
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Partial files
+@import "base/variables";
+@import "base/functions";
+@import "base/mixins";
+@import "base/reset";
+@import "base/global";
+@import "base/until";
+@import "components/button";
+@import "components/header";
+@import "components/banner";
+@import "components/about";
+@import "components/services-block";
+@import "components/shapeLayout";
+@import "components/testimonial";
+@import "components/contact";
+@import "components/footer";
+/**
+ *
+ * Common CSS
+ *
+ */

@@ -1,0 +1,95 @@
+.btn {
+  font-family: $fontUrbanist;
+  font-weight: $fontSemi;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 18px 30px;
+  height: 58px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+  pointer-events: auto;
+  z-index: 1;
+  @include respond(tabland) {
+    height: auto;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 14px 30px;
+  }
+  @include respond(tabport) {
+    padding: 13px 30px;
+  }
+  i {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: $clrWhite;
+    border-radius: 8px;
+    border-color: $clrSecondary;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition-property: transform, -webkit-transform;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+  &:hover {
+    &::before {
+      transform: scaleX(1);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    }
+  }
+  &-primary {
+    border: 1px solid $clrPrimary;
+    background: $clrPrimary;
+    border-radius: 8px;
+    color: $clrDefault;
+
+    &:focus {
+      box-shadow: none;
+      background: $clrPrimary;
+      border-color: $clrPrimary;
+    }
+    &:hover {
+      background: $clrPrimary;
+      border-color: $clrPrimary;
+      color: $clrPrimary;
+    }
+  }
+  &-filled {
+    border: 1px solid $clrPrimary;
+    background: transparent !important;
+    border-radius: 8px;
+    color: $clrDefault;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &::before {
+      background: $clrPrimary;
+    }
+
+    &:hover {
+      color: $clrDefault;
+    }
+  }
+}

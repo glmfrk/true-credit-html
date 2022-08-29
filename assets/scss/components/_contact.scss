@@ -1,0 +1,245 @@
+.contact-section {
+  position: relative;
+  padding: 0px;
+  background: #fdf9ef;
+  .contact-wrapper {
+    background: url("../images/contact/background.png") no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    border-radius: 22px;
+    padding: 52px 86px 50px 128px;
+    min-height: 449px;
+    position: relative;
+    z-index: 1;
+    @include respond(medium) {
+      padding: 40px;
+    }
+    @include respond(tabland) {
+      padding: 40px 30px;
+    }
+    @include respond(tabport) {
+      padding: 30px 20px;
+    }
+    @include respond(phone-sm) {
+      padding: 20px 15px;
+    }
+    h3 {
+      margin: 0px 0px 20px;
+    }
+  }
+  .address {
+    list-style: none;
+    li {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 20px;
+      white-space: nowrap;
+      @include respond(xl) {
+        gap: 20px;
+        margin-bottom: 15px;
+      }
+      @include respond(medium) {
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+      @include respond(tabland) {
+        gap: 10px;
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      p {
+        br {
+          display: none;
+          @include respond(phone-sm) {
+            display: inline-block;
+          }
+        }
+      }
+      p,
+      a {
+        font-family: $fontUrbanist;
+        font-weight: $fontSemi;
+        font-size: 20px;
+        line-height: 160%;
+        color: $clrContent;
+        margin: 0;
+        transition: $transition;
+        &:hover {
+          color: $clrPrimary;
+          i,
+          svg {
+            transform: rotate3d(180deg);
+          }
+        }
+        @include respond(xl) {
+          font-size: 17px;
+        }
+        @include respond(tabland) {
+          font-size: 14px;
+        }
+        @include respond(tabport) {
+          font-size: 18px;
+        }
+        @include respond(phone-sm) {
+          font-size: 15px;
+        }
+      }
+      .icon {
+        width: 49px;
+        height: 49px;
+        background: #ffffff;
+        border-radius: 50px;
+        box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+        @include respond(medium) {
+          width: 42px;
+          height: 42px;
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+        @include respond(tabland) {
+          width: 30px;
+          height: 30px;
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+        @include respond(tabport) {
+          width: 42px;
+          height: 42px;
+          svg {
+            width: 17px;
+            height: 17px;
+          }
+        }
+        @include respond(phone-sm) {
+          width: 30px;
+          height: 30px;
+          svg {
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 560px;
+    margin-left: auto;
+    background: #fffcf5;
+    box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.02);
+    border-radius: 22px;
+    padding: 49px 32px 38px;
+    position: relative;
+    @include respond(medium) {
+      padding: 35px 25px;
+    }
+
+    .input-item {
+      width: 100%;
+      display: block;
+      margin-bottom: 24px;
+      position: relative;
+      input {
+        font-family: $fontUrbanist;
+        font-weight: $fontRegular;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: #666666;
+        outline: none;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        position: relative;
+        padding: 0px 0px 19px;
+      }
+      textarea {
+        font-family: $fontUrbanist;
+        font-weight: $fontRegular;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.01em;
+        color: #666666;
+        text-transform: capitalize;
+        outline: none;
+        box-shadow: none;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        min-height: 43.5px;
+        width: 100%;
+        resize: none;
+        position: relative;
+        &::-webkit-scrollbar-track {
+          padding: 4px 0;
+          background-color: #ffffff;
+        }
+        &::-webkit-scrollbar {
+          width: 5px;
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 99px;
+          background-color: #6b6b6b;
+        }
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include respond(tabland) {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .input-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include respond(tabland) {
+        flex-direction: column;
+      }
+      .input-item {
+        flex-basis: 45%;
+        display: block;
+        @include respond(tabland) {
+          flex-basis: 100%;
+        }
+      }
+    }
+    ul {
+      list-style: none;
+    }
+    .user-img {
+      position: absolute;
+      z-index: 2;
+      top: -20px;
+      right: 22%;
+      transform: translateX(-50%);
+      img {
+        width: auto;
+      }
+    }
+    .user-img-2 {
+      left: -35px;
+      top: 70%;
+      transform: translateY(-70%);
+    }
+  }
+}

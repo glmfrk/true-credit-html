@@ -1,0 +1,39 @@
+.about-section {
+  background: #fdf9ef url("../images/about/backgrund.png") no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  position: relative;
+  padding: 20px 0px 172px;
+  @include respond(xl) {
+    padding-bottom: 120px;
+  }
+  @include respond(medium) {
+    padding-bottom: 80px;
+  }
+  @include respond(tabland) {
+    padding-bottom: 60px;
+  }
+  @include respond(tabport) {
+    padding: 0px 0px 40px;
+  }
+  .container {
+    max-width: 1140px;
+  }
+  .block-content {
+    max-width: 498px;
+    margin-left: auto;
+    h3 {
+      margin-top: 0;
+    }
+    span {
+      display: block;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+  }
+}
+.about-sec-03 {
+  padding: 127px 0px 153px;
+}

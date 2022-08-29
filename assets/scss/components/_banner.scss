@@ -1,0 +1,214 @@
+.banner-section {
+  width: 100%;
+  background: #fdf9ef url(../images/banner/bg-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: calc(102px + 46px);
+  // padding-bottom: 335px;
+  padding-bottom: 17.5%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  @include respond(xl) {
+    padding-bottom: 9.5%;
+  }
+
+  .hero-text {
+    margin-top: 56px;
+    margin-bottom: 50px;
+    h6 {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 50px;
+      line-height: 112%;
+      color: $clrDefault;
+      @include respond(medium) {
+        font-size: 42px;
+      }
+      @include respond(tabland) {
+        font-size: 32px;
+      }
+      @include respond(tabport) {
+        font-size: 29px;
+      }
+      @include respond(phone) {
+        font-size: 24px;
+      }
+    }
+    h1 {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 72px;
+      line-height: 112%;
+      color: #ffa408;
+      .h2Highlight {
+        font-weight: 800;
+        line-height: 112%;
+        color: $clrDefault;
+        display: inherit;
+      }
+      @include respond(medium) {
+        font-size: 52px;
+      }
+      @include respond(tabland) {
+        font-size: 42px;
+      }
+      @include respond(tabport) {
+        font-size: 36px;
+      }
+      @include respond(phone) {
+        font-size: 32px;
+      }
+      @include respond(phone-sm) {
+        font-size: 29px;
+      }
+    }
+    p {
+      font-family: $fontUrbanist;
+      font-weight: $fontMid;
+      font-size: 20px;
+      line-height: 164%;
+      color: #6b6b6b;
+      padding-right: 50px;
+      margin: 10px 0px 22px;
+      @include respond(tabport) {
+        font-size: 16px;
+      }
+    }
+  }
+  .hero-btn {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    @include respond(medium) {
+      .btn {
+        height: auto;
+        font-size: 15px;
+        padding: 14px 25px;
+      }
+    }
+    @include respond(phone-sm) {
+      .btn {
+        padding: 13px 20px;
+        font-size: 15px;
+      }
+    }
+    @include respond(phone-xm) {
+      flex-direction: column;
+      .btn {
+        padding: 13px 20px;
+      }
+    }
+  }
+  .hero-image {
+    position: absolute;
+    width: 50%;
+    top: 156px;
+    @include respond(tabland) {
+      position: static;
+      width: auto;
+      top: 186px;
+    }
+  }
+}
+
+// Other Page Banners Design Start
+
+#banner-02 {
+}
+#banner-03 {
+  background: #fdf8ea url(../images/banner/bg-image-03.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 0;
+  position: relative;
+  z-index: 1;
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../images/banner/bg-shape.png);
+    height: 77%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    z-index: 1;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../images/banner/users.png);
+    height: 130%;
+    width: 79%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    z-index: 1;
+  }
+  .hero-text {
+    text-align: center;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 3;
+
+    h6 {
+      font-size: 66px;
+      span {
+        color: $clrPrimary;
+      }
+      @include respond(medium) {
+        font-size: 48px;
+      }
+      @include respond(tabland) {
+        font-size: 36px;
+      }
+      @include respond(tabport) {
+        font-size: 29px;
+      }
+      @include respond(phone) {
+        font-size: 24px;
+      }
+    }
+    h1 {
+      font-size: 82px;
+      @include respond(medium) {
+        font-size: 64px;
+      }
+      @include respond(tabland) {
+        font-size: 48px;
+      }
+      @include respond(tabport) {
+        font-size: 36px;
+      }
+      @include respond(phone) {
+        font-size: 29px;
+      }
+    }
+    .hero-btn {
+      justify-content: center;
+    }
+    p {
+      max-width: 720px;
+      margin: 19px auto 34px;
+    }
+  }
+  .hero-image {
+    position: relative;
+    margin: auto;
+    top: 0;
+    z-index: 3;
+    width: 87%;
+  }
+}

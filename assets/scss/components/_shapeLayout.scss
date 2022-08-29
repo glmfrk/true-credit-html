@@ -1,0 +1,17 @@
+.shapeLayout-sec {
+  background: #fdf9ef url("../images/shape/shape-image.png") no-repeat;
+  background-size: cover;
+  background-position: initial;
+  position: relative;
+  padding: 0;
+  min-height: 476px;
+  @include respond(medium) {
+    min-height: 420px;
+  }
+  @include respond(tabland) {
+    min-height: 376px;
+  }
+  @include respond(tabport) {
+    min-height: 300px;
+  }
+}
